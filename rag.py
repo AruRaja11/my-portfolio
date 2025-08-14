@@ -15,7 +15,7 @@ load_dotenv()
 
 os.environ["GOOGLE_API_KEY"] = os.getenv("GEMINI_API_KEY")
 
-loader = TextLoader(r"data\info.txt")
+loader = TextLoader("data/info.txt")
 document = loader.load()
 
 text_splitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=200)
